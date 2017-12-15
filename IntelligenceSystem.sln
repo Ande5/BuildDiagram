@@ -5,7 +5,7 @@ VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntelligenceSystem", "IntelligenceSystem\IntelligenceSystem.csproj", "{D1C934C6-A72D-4546-9C0B-3CA18836BBFA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SystemLogic", "SystemLogic\SystemLogic.csproj", "{B7A89C45-EAE9-4769-9886-4E2C65098D16}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SystemLogic", "SystemLogic\SystemLogic.csproj", "{B1550FE6-AF5C-4BE5-9FC9-9016C2F887DA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,22 +17,22 @@ Global
 		{D1C934C6-A72D-4546-9C0B-3CA18836BBFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D1C934C6-A72D-4546-9C0B-3CA18836BBFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D1C934C6-A72D-4546-9C0B-3CA18836BBFA}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B7A89C45-EAE9-4769-9886-4E2C65098D16}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B7A89C45-EAE9-4769-9886-4E2C65098D16}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B7A89C45-EAE9-4769-9886-4E2C65098D16}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B7A89C45-EAE9-4769-9886-4E2C65098D16}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B1550FE6-AF5C-4BE5-9FC9-9016C2F887DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1550FE6-AF5C-4BE5-9FC9-9016C2F887DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1550FE6-AF5C-4BE5-9FC9-9016C2F887DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1550FE6-AF5C-4BE5-9FC9-9016C2F887DA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		VSStyle = SHADED (SHADEDA).vssf
-		VSTargetControls = FormsAndControls
-		VSToolStripStyle = Mixed
-		VSTextShadow = True
-		VSSkinFlatStyles = True
-		VSSkinToggleButtons = True
-		VSUseSystemFonts = False
 		VSCustomBkgrdPaint = True
+		VSUseSystemFonts = False
+		VSSkinToggleButtons = True
+		VSSkinFlatStyles = True
+		VSTextShadow = True
+		VSToolStripStyle = Mixed
+		VSTargetControls = FormsAndControls
+		VSStyle = SHADED (SHADEDA).vssf
 	EndGlobalSection
 EndGlobal
