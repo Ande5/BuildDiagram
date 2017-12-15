@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntelligenceSystem", "IntelligenceSystem\IntelligenceSystem.csproj", "{D1C934C6-A72D-4546-9C0B-3CA18836BBFA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D1C934C6-A72D-4546-9C0B-3CA18836BBFA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1C934C6-A72D-4546-9C0B-3CA18836BBFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1C934C6-A72D-4546-9C0B-3CA18836BBFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1C934C6-A72D-4546-9C0B-3CA18836BBFA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		VSCustomBkgrdPaint = True
+		VSUseSystemFonts = False
+		VSSkinToggleButtons = True
+		VSSkinFlatStyles = True
+		VSTextShadow = True
+		VSToolStripStyle = Mixed
+		VSTargetControls = FormsAndControls
+		VSStyle = SHADED (SHADEDA).vssf
+	EndGlobalSection
+EndGlobal
