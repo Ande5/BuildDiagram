@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Net;
+using SystemLogic;
 
 namespace IntelligenceSystem
 {
@@ -24,7 +25,7 @@ namespace IntelligenceSystem
         {
             panel2.BackColor = Color.FromArgb(100, 0,0,0);
             panel3.BackColor = Color.FromArgb(100, 0, 0, 0);
-
+      
         }
 
         private void ClearToolStripMenuItem_Click(object sender, EventArgs e)
