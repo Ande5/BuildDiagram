@@ -139,6 +139,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Anchor.ico" />
+    <Content Include="SkinSoft.VisualStyler.Design.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SkinSoft.VisualStyler.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <None Include="Resources\RSS_Feed_2.png" />
     <None Include="Resources\Button_Reload.png" />
   </ItemGroup>
