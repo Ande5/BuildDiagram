@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Net;
-using SystemLogic;
+
 namespace IntelligenceSystem
 {
     public partial class RollingDiagramma : Form
