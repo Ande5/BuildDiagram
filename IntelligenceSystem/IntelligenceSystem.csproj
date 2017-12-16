@@ -76,6 +76,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataBase.cs" />
     <Compile Include="InfoDecisionMaking.cs" />
     <Compile Include="RollingDiagramma.cs">
       <SubType>Form</SubType>
@@ -86,6 +87,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SystemLogicalRules.cs" />
+    <Compile Include="Variant.cs" />
     <EmbeddedResource Include="RollingDiagramma.resx">
       <DependentUpon>RollingDiagramma.cs</DependentUpon>
     </EmbeddedResource>
