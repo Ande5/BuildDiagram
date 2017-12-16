@@ -10,12 +10,8 @@ namespace IntelligenceSystem
         private double[] m_A2 = new double[3];
         private double[] m_Y = new double[3]; //курсовой угол
 
-        private double m_tauTheta;
-
         public SystemLogicalRules()
         {
-            // Амплитуды качки:
-            m_tauTheta = 15;
 
         }
 
