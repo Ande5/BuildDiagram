@@ -35,6 +35,7 @@
             this.contextMenuDiagram = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.ReloadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ClearToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ControlWindowToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.visualStyler1 = new SkinSoft.VisualStyler.VisualStyler(this.components);
@@ -57,7 +58,7 @@
             this.labelLengthShip = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.textBox9 = new System.Windows.Forms.TextBox();
-            this.ControlWindowToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.butCalculation = new System.Windows.Forms.Button();
             this.groupDiagramma.SuspendLayout();
             this.panelDiagram.SuspendLayout();
             this.contextMenuDiagram.SuspendLayout();
@@ -97,7 +98,7 @@
             this.ClearToolStripMenuItem,
             this.ControlWindowToolStripMenuItem});
             this.contextMenuDiagram.Name = "contextMenuDiagram";
-            this.contextMenuDiagram.Size = new System.Drawing.Size(157, 104);
+            this.contextMenuDiagram.Size = new System.Drawing.Size(141, 82);
             // 
             // ReloadToolStripMenuItem
             // 
@@ -105,7 +106,7 @@
             this.ReloadToolStripMenuItem.Image = global::IntelligenceSystem.Properties.Resources.Button_Reload;
             this.ReloadToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.ReloadToolStripMenuItem.Name = "ReloadToolStripMenuItem";
-            this.ReloadToolStripMenuItem.Size = new System.Drawing.Size(156, 26);
+            this.ReloadToolStripMenuItem.Size = new System.Drawing.Size(140, 26);
             this.ReloadToolStripMenuItem.Text = "Обновить";
             // 
             // ClearToolStripMenuItem
@@ -114,9 +115,16 @@
             this.ClearToolStripMenuItem.Image = global::IntelligenceSystem.Properties.Resources.RSS_Feed_2;
             this.ClearToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.ClearToolStripMenuItem.Name = "ClearToolStripMenuItem";
-            this.ClearToolStripMenuItem.Size = new System.Drawing.Size(156, 26);
+            this.ClearToolStripMenuItem.Size = new System.Drawing.Size(140, 26);
             this.ClearToolStripMenuItem.Text = "Очистить";
             this.ClearToolStripMenuItem.Click += new System.EventHandler(this.ClearToolStripMenuItem_Click);
+            // 
+            // ControlWindowToolStripMenuItem
+            // 
+            this.ControlWindowToolStripMenuItem.Name = "ControlWindowToolStripMenuItem";
+            this.ControlWindowToolStripMenuItem.Size = new System.Drawing.Size(140, 26);
+            this.ControlWindowToolStripMenuItem.Text = "Свернуть";
+            this.ControlWindowToolStripMenuItem.Click += new System.EventHandler(this.ControlWindowToolStripMenuItem_Click);
             // 
             // panel3
             // 
@@ -140,6 +148,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.butCalculation);
             this.groupBox1.Controls.Add(this.textBox8);
             this.groupBox1.Controls.Add(this.textBox7);
             this.groupBox1.Controls.Add(this.textBox6);
@@ -331,18 +340,20 @@
             this.textBox9.TabIndex = 0;
             this.textBox9.Text = "вававав";
             // 
-            // ControlWindowToolStripMenuItem
+            // butCalculation
             // 
-            this.ControlWindowToolStripMenuItem.Name = "ControlWindowToolStripMenuItem";
-            this.ControlWindowToolStripMenuItem.Size = new System.Drawing.Size(156, 26);
-            this.ControlWindowToolStripMenuItem.Text = "Свернуть";
-            this.ControlWindowToolStripMenuItem.Click += new System.EventHandler(this.ControlWindowToolStripMenuItem_Click);
+            this.butCalculation.Location = new System.Drawing.Point(55, 270);
+            this.butCalculation.Name = "butCalculation";
+            this.butCalculation.Size = new System.Drawing.Size(75, 23);
+            this.butCalculation.TabIndex = 16;
+            this.butCalculation.Text = "Считать";
+            this.butCalculation.UseVisualStyleBackColor = true;
             // 
             // RollingDiagramma
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1317, 372);
+            this.ClientSize = new System.Drawing.Size(1337, 396);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupDiagramma);
@@ -396,6 +407,7 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.TextBox textBox9;
         private System.Windows.Forms.ToolStripMenuItem ControlWindowToolStripMenuItem;
+        private System.Windows.Forms.Button butCalculation;
     }
 }
 
