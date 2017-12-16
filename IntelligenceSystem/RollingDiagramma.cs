@@ -24,7 +24,7 @@ namespace IntelligenceSystem
         {
             panel2.BackColor = Color.FromArgb(100, 0,0,0);
             panel3.BackColor = Color.FromArgb(110, 0, 0, 0);
-           
+          
         }
 
         private void ClearToolStripMenuItem_Click(object sender, EventArgs e)
