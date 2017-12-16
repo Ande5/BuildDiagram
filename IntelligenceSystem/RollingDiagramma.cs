@@ -23,7 +23,7 @@ namespace IntelligenceSystem
         public RollingDiagramma()
         {
             InitializeComponent();
-            this.Size = new Size(975, 398);
+           // this.Size = new Size(975, 398);
         }
      
         private void Form1_Load(object sender, EventArgs e)
