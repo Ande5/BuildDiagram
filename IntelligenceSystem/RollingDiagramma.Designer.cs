@@ -40,13 +40,14 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.visualStyler1 = new SkinSoft.VisualStyler.VisualStyler(this.components);
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.butResult = new System.Windows.Forms.Button();
+            this.textAmplityda = new System.Windows.Forms.TextBox();
+            this.textWavelength = new System.Windows.Forms.TextBox();
+            this.textHeadingAngle = new System.Windows.Forms.TextBox();
+            this.textSpeedShip = new System.Windows.Forms.TextBox();
+            this.textMetacentr = new System.Windows.Forms.TextBox();
+            this.textDraftShip = new System.Windows.Forms.TextBox();
+            this.textWidthShip = new System.Windows.Forms.TextBox();
             this.labelAmplityda = new System.Windows.Forms.Label();
             this.labelWavelength = new System.Windows.Forms.Label();
             this.labelHeadingAngle = new System.Windows.Forms.Label();
@@ -54,17 +55,35 @@
             this.labelMetacentr = new System.Windows.Forms.Label();
             this.labelDraftShip = new System.Windows.Forms.Label();
             this.labelWidthShip = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textLengthShip = new System.Windows.Forms.TextBox();
             this.labelLengthShip = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.textBox9 = new System.Windows.Forms.TextBox();
-            this.butCalculation = new System.Windows.Forms.Button();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.groupDiagramma.SuspendLayout();
             this.panelDiagram.SuspendLayout();
             this.contextMenuDiagram.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.visualStyler1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupDiagramma
@@ -148,14 +167,14 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.butCalculation);
-            this.groupBox1.Controls.Add(this.textBox8);
-            this.groupBox1.Controls.Add(this.textBox7);
-            this.groupBox1.Controls.Add(this.textBox6);
-            this.groupBox1.Controls.Add(this.textBox5);
-            this.groupBox1.Controls.Add(this.textBox4);
-            this.groupBox1.Controls.Add(this.textBox3);
-            this.groupBox1.Controls.Add(this.textBox2);
+            this.groupBox1.Controls.Add(this.butResult);
+            this.groupBox1.Controls.Add(this.textAmplityda);
+            this.groupBox1.Controls.Add(this.textWavelength);
+            this.groupBox1.Controls.Add(this.textHeadingAngle);
+            this.groupBox1.Controls.Add(this.textSpeedShip);
+            this.groupBox1.Controls.Add(this.textMetacentr);
+            this.groupBox1.Controls.Add(this.textDraftShip);
+            this.groupBox1.Controls.Add(this.textWidthShip);
             this.groupBox1.Controls.Add(this.labelAmplityda);
             this.groupBox1.Controls.Add(this.labelWavelength);
             this.groupBox1.Controls.Add(this.labelHeadingAngle);
@@ -163,7 +182,7 @@
             this.groupBox1.Controls.Add(this.labelMetacentr);
             this.groupBox1.Controls.Add(this.labelDraftShip);
             this.groupBox1.Controls.Add(this.labelWidthShip);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.textLengthShip);
             this.groupBox1.Controls.Add(this.labelLengthShip);
             this.groupBox1.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.groupBox1.ForeColor = System.Drawing.Color.Black;
@@ -174,61 +193,71 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Исходные данные";
             // 
-            // textBox8
+            // butResult
             // 
-            this.textBox8.ForeColor = System.Drawing.Color.Black;
-            this.textBox8.Location = new System.Drawing.Point(141, 224);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(141, 22);
-            this.textBox8.TabIndex = 15;
+            this.butResult.Location = new System.Drawing.Point(25, 281);
+            this.butResult.Name = "butResult";
+            this.butResult.Size = new System.Drawing.Size(75, 23);
+            this.butResult.TabIndex = 16;
+            this.butResult.Text = "Считать";
+            this.butResult.UseVisualStyleBackColor = true;
+            this.butResult.Click += new System.EventHandler(this.butResult_Click);
             // 
-            // textBox7
+            // textAmplityda
             // 
-            this.textBox7.ForeColor = System.Drawing.Color.Black;
-            this.textBox7.Location = new System.Drawing.Point(141, 196);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(141, 22);
-            this.textBox7.TabIndex = 14;
+            this.textAmplityda.ForeColor = System.Drawing.Color.Black;
+            this.textAmplityda.Location = new System.Drawing.Point(141, 224);
+            this.textAmplityda.Name = "textAmplityda";
+            this.textAmplityda.Size = new System.Drawing.Size(141, 22);
+            this.textAmplityda.TabIndex = 15;
             // 
-            // textBox6
+            // textWavelength
             // 
-            this.textBox6.ForeColor = System.Drawing.Color.Black;
-            this.textBox6.Location = new System.Drawing.Point(141, 168);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(141, 22);
-            this.textBox6.TabIndex = 13;
+            this.textWavelength.ForeColor = System.Drawing.Color.Black;
+            this.textWavelength.Location = new System.Drawing.Point(141, 196);
+            this.textWavelength.Name = "textWavelength";
+            this.textWavelength.Size = new System.Drawing.Size(141, 22);
+            this.textWavelength.TabIndex = 14;
             // 
-            // textBox5
+            // textHeadingAngle
             // 
-            this.textBox5.ForeColor = System.Drawing.Color.Black;
-            this.textBox5.Location = new System.Drawing.Point(141, 140);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(141, 22);
-            this.textBox5.TabIndex = 12;
+            this.textHeadingAngle.ForeColor = System.Drawing.Color.Black;
+            this.textHeadingAngle.Location = new System.Drawing.Point(141, 168);
+            this.textHeadingAngle.Name = "textHeadingAngle";
+            this.textHeadingAngle.Size = new System.Drawing.Size(141, 22);
+            this.textHeadingAngle.TabIndex = 13;
             // 
-            // textBox4
+            // textSpeedShip
             // 
-            this.textBox4.ForeColor = System.Drawing.Color.Black;
-            this.textBox4.Location = new System.Drawing.Point(141, 112);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(141, 22);
-            this.textBox4.TabIndex = 11;
+            this.textSpeedShip.ForeColor = System.Drawing.Color.Black;
+            this.textSpeedShip.Location = new System.Drawing.Point(141, 140);
+            this.textSpeedShip.Name = "textSpeedShip";
+            this.textSpeedShip.Size = new System.Drawing.Size(141, 22);
+            this.textSpeedShip.TabIndex = 12;
             // 
-            // textBox3
+            // textMetacentr
             // 
-            this.textBox3.ForeColor = System.Drawing.Color.Black;
-            this.textBox3.Location = new System.Drawing.Point(141, 84);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(141, 22);
-            this.textBox3.TabIndex = 10;
+            this.textMetacentr.ForeColor = System.Drawing.Color.Black;
+            this.textMetacentr.Location = new System.Drawing.Point(141, 112);
+            this.textMetacentr.Name = "textMetacentr";
+            this.textMetacentr.Size = new System.Drawing.Size(141, 22);
+            this.textMetacentr.TabIndex = 11;
             // 
-            // textBox2
+            // textDraftShip
             // 
-            this.textBox2.ForeColor = System.Drawing.Color.Black;
-            this.textBox2.Location = new System.Drawing.Point(141, 56);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(141, 22);
-            this.textBox2.TabIndex = 9;
+            this.textDraftShip.ForeColor = System.Drawing.Color.Black;
+            this.textDraftShip.Location = new System.Drawing.Point(141, 84);
+            this.textDraftShip.Name = "textDraftShip";
+            this.textDraftShip.Size = new System.Drawing.Size(141, 22);
+            this.textDraftShip.TabIndex = 10;
+            // 
+            // textWidthShip
+            // 
+            this.textWidthShip.ForeColor = System.Drawing.Color.Black;
+            this.textWidthShip.Location = new System.Drawing.Point(141, 56);
+            this.textWidthShip.Name = "textWidthShip";
+            this.textWidthShip.Size = new System.Drawing.Size(141, 22);
+            this.textWidthShip.TabIndex = 9;
             // 
             // labelAmplityda
             // 
@@ -300,13 +329,13 @@
             this.labelWidthShip.TabIndex = 2;
             this.labelWidthShip.Text = "Ширина корабля";
             // 
-            // textBox1
+            // textLengthShip
             // 
-            this.textBox1.ForeColor = System.Drawing.Color.Black;
-            this.textBox1.Location = new System.Drawing.Point(141, 28);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(141, 22);
-            this.textBox1.TabIndex = 1;
+            this.textLengthShip.ForeColor = System.Drawing.Color.Black;
+            this.textLengthShip.Location = new System.Drawing.Point(141, 28);
+            this.textLengthShip.Name = "textLengthShip";
+            this.textLengthShip.Size = new System.Drawing.Size(141, 22);
+            this.textLengthShip.TabIndex = 1;
             // 
             // labelLengthShip
             // 
@@ -340,20 +369,193 @@
             this.textBox9.TabIndex = 0;
             this.textBox9.Text = "вававав";
             // 
-            // butCalculation
+            // groupBox3
             // 
-            this.butCalculation.Location = new System.Drawing.Point(55, 270);
-            this.butCalculation.Name = "butCalculation";
-            this.butCalculation.Size = new System.Drawing.Size(75, 23);
-            this.butCalculation.TabIndex = 16;
-            this.butCalculation.Text = "Считать";
-            this.butCalculation.UseVisualStyleBackColor = true;
+            this.groupBox3.Controls.Add(this.button1);
+            this.groupBox3.Controls.Add(this.textBox1);
+            this.groupBox3.Controls.Add(this.textBox2);
+            this.groupBox3.Controls.Add(this.textBox3);
+            this.groupBox3.Controls.Add(this.textBox4);
+            this.groupBox3.Controls.Add(this.textBox5);
+            this.groupBox3.Controls.Add(this.textBox6);
+            this.groupBox3.Controls.Add(this.textBox7);
+            this.groupBox3.Controls.Add(this.label1);
+            this.groupBox3.Controls.Add(this.label2);
+            this.groupBox3.Controls.Add(this.label3);
+            this.groupBox3.Controls.Add(this.label4);
+            this.groupBox3.Controls.Add(this.label5);
+            this.groupBox3.Controls.Add(this.label6);
+            this.groupBox3.Controls.Add(this.label7);
+            this.groupBox3.Controls.Add(this.textBox8);
+            this.groupBox3.Controls.Add(this.label8);
+            this.groupBox3.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.groupBox3.ForeColor = System.Drawing.Color.Black;
+            this.groupBox3.Location = new System.Drawing.Point(659, 359);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(306, 342);
+            this.groupBox3.TabIndex = 4;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Исходные данные";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(25, 281);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 16;
+            this.button1.Text = "Считать";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // textBox1
+            // 
+            this.textBox1.ForeColor = System.Drawing.Color.Black;
+            this.textBox1.Location = new System.Drawing.Point(141, 224);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(141, 22);
+            this.textBox1.TabIndex = 15;
+            // 
+            // textBox2
+            // 
+            this.textBox2.ForeColor = System.Drawing.Color.Black;
+            this.textBox2.Location = new System.Drawing.Point(141, 196);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(141, 22);
+            this.textBox2.TabIndex = 14;
+            // 
+            // textBox3
+            // 
+            this.textBox3.ForeColor = System.Drawing.Color.Black;
+            this.textBox3.Location = new System.Drawing.Point(141, 168);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(141, 22);
+            this.textBox3.TabIndex = 13;
+            // 
+            // textBox4
+            // 
+            this.textBox4.ForeColor = System.Drawing.Color.Black;
+            this.textBox4.Location = new System.Drawing.Point(141, 140);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(141, 22);
+            this.textBox4.TabIndex = 12;
+            // 
+            // textBox5
+            // 
+            this.textBox5.ForeColor = System.Drawing.Color.Black;
+            this.textBox5.Location = new System.Drawing.Point(141, 112);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(141, 22);
+            this.textBox5.TabIndex = 11;
+            // 
+            // textBox6
+            // 
+            this.textBox6.ForeColor = System.Drawing.Color.Black;
+            this.textBox6.Location = new System.Drawing.Point(141, 84);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(141, 22);
+            this.textBox6.TabIndex = 10;
+            // 
+            // textBox7
+            // 
+            this.textBox7.ForeColor = System.Drawing.Color.Black;
+            this.textBox7.Location = new System.Drawing.Point(141, 56);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(141, 22);
+            this.textBox7.TabIndex = 9;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(16, 230);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(114, 16);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "Амплитуда качки";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(16, 202);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(84, 16);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "Длина волны";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.Location = new System.Drawing.Point(16, 174);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(90, 16);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "Курсовой угол";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.ForeColor = System.Drawing.Color.Black;
+            this.label4.Location = new System.Drawing.Point(16, 146);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(118, 16);
+            this.label4.TabIndex = 5;
+            this.label4.Text = "Скорость корабля";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.ForeColor = System.Drawing.Color.Black;
+            this.label5.Location = new System.Drawing.Point(16, 110);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(127, 32);
+            this.label5.TabIndex = 4;
+            this.label5.Text = "Метацентрическая\r\n          высота";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.ForeColor = System.Drawing.Color.Black;
+            this.label6.Location = new System.Drawing.Point(16, 90);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(101, 16);
+            this.label6.TabIndex = 3;
+            this.label6.Text = "Осадка корабля";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.ForeColor = System.Drawing.Color.Black;
+            this.label7.Location = new System.Drawing.Point(16, 62);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(109, 16);
+            this.label7.TabIndex = 2;
+            this.label7.Text = "Ширина корабля";
+            // 
+            // textBox8
+            // 
+            this.textBox8.ForeColor = System.Drawing.Color.Black;
+            this.textBox8.Location = new System.Drawing.Point(141, 28);
+            this.textBox8.Name = "textBox8";
+            this.textBox8.Size = new System.Drawing.Size(141, 22);
+            this.textBox8.TabIndex = 1;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.ForeColor = System.Drawing.Color.Black;
+            this.label8.Location = new System.Drawing.Point(16, 34);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(96, 16);
+            this.label8.TabIndex = 0;
+            this.label8.Text = "Длина корабля";
             // 
             // RollingDiagramma
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1337, 396);
+            this.ClientSize = new System.Drawing.Size(1337, 733);
+            this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupDiagramma);
@@ -373,6 +575,8 @@
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -385,7 +589,7 @@
         private SkinSoft.VisualStyler.VisualStyler visualStyler1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textLengthShip;
         private System.Windows.Forms.Label labelLengthShip;
         private System.Windows.Forms.Label labelAmplityda;
         private System.Windows.Forms.Label labelWavelength;
@@ -394,20 +598,38 @@
         private System.Windows.Forms.Label labelMetacentr;
         private System.Windows.Forms.Label labelDraftShip;
         private System.Windows.Forms.Label labelWidthShip;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textAmplityda;
+        private System.Windows.Forms.TextBox textWavelength;
+        private System.Windows.Forms.TextBox textHeadingAngle;
+        private System.Windows.Forms.TextBox textSpeedShip;
+        private System.Windows.Forms.TextBox textMetacentr;
+        private System.Windows.Forms.TextBox textDraftShip;
+        private System.Windows.Forms.TextBox textWidthShip;
         private System.Windows.Forms.ContextMenuStrip contextMenuDiagram;
         private System.Windows.Forms.ToolStripMenuItem ReloadToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ClearToolStripMenuItem;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.TextBox textBox9;
         private System.Windows.Forms.ToolStripMenuItem ControlWindowToolStripMenuItem;
-        private System.Windows.Forms.Button butCalculation;
+        private System.Windows.Forms.Button butResult;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.Label label8;
     }
 }
 

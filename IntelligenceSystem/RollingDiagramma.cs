@@ -13,7 +13,13 @@ namespace IntelligenceSystem
 {
     public partial class RollingDiagramma : Form
     {
-       
+
+        double LengthShip;
+        double WidthShip;
+        double DraftShip;
+        double Metacentr;
+        double SpeedShip;
+        double HeadingAngle;
         public RollingDiagramma()
         {
             InitializeComponent();
@@ -37,6 +43,11 @@ namespace IntelligenceSystem
         private void ControlWindowToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Size = new Size(1323,398);
+        }
+
+        private void butResult_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
