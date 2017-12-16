@@ -139,7 +139,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Anchor.ico" />
-    <Content Include="SkinSoft.VisualStyler.Design.dll" />
     <Content Include="SkinSoft.VisualStyler.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
