@@ -39,7 +39,9 @@ namespace IntelligenceSystem
 
             textPE.Text = variant_base.m_val0.ToString();
             textPHE.Text = variant_base.m_val1.ToString();
-           // textPHNOTE.Text = variant_base.
+            textPHNOTE.Text = variant_base.m_val2.ToString();
+            textMDHE1.Text = variant_base.m_val3.ToString();
+            textMDHE2.Text = variant_base.m_val4.ToString();
 
             system_logic = new SystemLogicalRules(variant_base.m_waveLength, variant_base.m_speed, variant_base.m_weight, 
                                                      variant_base.m_draft, variant_base.m_metacentricHeight);
@@ -102,6 +104,11 @@ namespace IntelligenceSystem
         private void ReloadToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ShowResonance();
+        }
+
+        private void butResultProbability_Click(object sender, EventArgs e)
+        {
+
         }
 
      

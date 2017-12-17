@@ -31,12 +31,19 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RollingDiagramma));
             this.groupDiagramma = new System.Windows.Forms.GroupBox();
+            this.panelDiagram = new System.Windows.Forms.Panel();
             this.contextMenuDiagram = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.ReloadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ClearToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ControlWindowToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.panelKeelResonanse = new System.Windows.Forms.Panel();
+            this.panelBortResonanse = new System.Windows.Forms.Panel();
             this.visualStyler1 = new SkinSoft.VisualStyler.VisualStyler(this.components);
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.textResult = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.butResultProbability = new System.Windows.Forms.Button();
+            this.butBuild = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.textMDHE2 = new System.Windows.Forms.TextBox();
             this.textMDHE1 = new System.Windows.Forms.TextBox();
@@ -66,21 +73,14 @@
             this.textLengthShip = new System.Windows.Forms.TextBox();
             this.labelLengthShip = new System.Windows.Forms.Label();
             this.butResult = new System.Windows.Forms.Button();
-            this.butBuild = new System.Windows.Forms.Button();
-            this.panelDiagram = new System.Windows.Forms.Panel();
-            this.panelKeelResonanse = new System.Windows.Forms.Panel();
-            this.panelBortResonanse = new System.Windows.Forms.Panel();
-            this.ReloadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ClearToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.button1 = new System.Windows.Forms.Button();
             this.groupDiagramma.SuspendLayout();
+            this.panelDiagram.SuspendLayout();
             this.contextMenuDiagram.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.visualStyler1)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
-            this.panelDiagram.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupDiagramma
@@ -95,6 +95,18 @@
             this.groupDiagramma.TabStop = false;
             this.groupDiagramma.Text = "Диаграмма качки";
             // 
+            // panelDiagram
+            // 
+            this.panelDiagram.BackgroundImage = global::IntelligenceSystem.Properties.Resources._Diagramma1;
+            this.panelDiagram.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panelDiagram.ContextMenuStrip = this.contextMenuDiagram;
+            this.panelDiagram.Controls.Add(this.panelKeelResonanse);
+            this.panelDiagram.Controls.Add(this.panelBortResonanse);
+            this.panelDiagram.Location = new System.Drawing.Point(3, 18);
+            this.panelDiagram.Name = "panelDiagram";
+            this.panelDiagram.Size = new System.Drawing.Size(635, 317);
+            this.panelDiagram.TabIndex = 0;
+            // 
             // contextMenuDiagram
             // 
             this.contextMenuDiagram.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -104,12 +116,48 @@
             this.contextMenuDiagram.Name = "contextMenuDiagram";
             this.contextMenuDiagram.Size = new System.Drawing.Size(141, 82);
             // 
+            // ReloadToolStripMenuItem
+            // 
+            this.ReloadToolStripMenuItem.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ReloadToolStripMenuItem.Image = global::IntelligenceSystem.Properties.Resources.Button_Reload;
+            this.ReloadToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.ReloadToolStripMenuItem.Name = "ReloadToolStripMenuItem";
+            this.ReloadToolStripMenuItem.Size = new System.Drawing.Size(140, 26);
+            this.ReloadToolStripMenuItem.Text = "Обновить";
+            this.ReloadToolStripMenuItem.Click += new System.EventHandler(this.ReloadToolStripMenuItem_Click);
+            // 
+            // ClearToolStripMenuItem
+            // 
+            this.ClearToolStripMenuItem.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ClearToolStripMenuItem.Image = global::IntelligenceSystem.Properties.Resources.RSS_Feed_2;
+            this.ClearToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.ClearToolStripMenuItem.Name = "ClearToolStripMenuItem";
+            this.ClearToolStripMenuItem.Size = new System.Drawing.Size(140, 26);
+            this.ClearToolStripMenuItem.Text = "Очистить";
+            this.ClearToolStripMenuItem.Click += new System.EventHandler(this.ClearToolStripMenuItem_Click);
+            // 
             // ControlWindowToolStripMenuItem
             // 
             this.ControlWindowToolStripMenuItem.Name = "ControlWindowToolStripMenuItem";
             this.ControlWindowToolStripMenuItem.Size = new System.Drawing.Size(140, 26);
             this.ControlWindowToolStripMenuItem.Text = "Свернуть";
             this.ControlWindowToolStripMenuItem.Click += new System.EventHandler(this.ControlWindowToolStripMenuItem_Click);
+            // 
+            // panelKeelResonanse
+            // 
+            this.panelKeelResonanse.Location = new System.Drawing.Point(386, -3);
+            this.panelKeelResonanse.Name = "panelKeelResonanse";
+            this.panelKeelResonanse.Size = new System.Drawing.Size(90, 301);
+            this.panelKeelResonanse.TabIndex = 1;
+            this.panelKeelResonanse.Visible = false;
+            // 
+            // panelBortResonanse
+            // 
+            this.panelBortResonanse.Location = new System.Drawing.Point(158, -3);
+            this.panelBortResonanse.Name = "panelBortResonanse";
+            this.panelBortResonanse.Size = new System.Drawing.Size(66, 301);
+            this.panelBortResonanse.TabIndex = 0;
+            this.panelBortResonanse.Visible = false;
             // 
             // visualStyler1
             // 
@@ -140,7 +188,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.butResultProbability);
             this.groupBox1.Controls.Add(this.butBuild);
             this.groupBox1.Controls.Add(this.groupBox3);
             this.groupBox1.Controls.Add(this.groupBox4);
@@ -153,6 +201,26 @@
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Исходные данные";
+            // 
+            // butResultProbability
+            // 
+            this.butResultProbability.Location = new System.Drawing.Point(536, 134);
+            this.butResultProbability.Name = "butResultProbability";
+            this.butResultProbability.Size = new System.Drawing.Size(90, 45);
+            this.butResultProbability.TabIndex = 19;
+            this.butResultProbability.Text = "Условная \r\nвероятность";
+            this.butResultProbability.UseVisualStyleBackColor = true;
+            this.butResultProbability.Click += new System.EventHandler(this.butResultProbability_Click);
+            // 
+            // butBuild
+            // 
+            this.butBuild.Location = new System.Drawing.Point(536, 33);
+            this.butBuild.Name = "butBuild";
+            this.butBuild.Size = new System.Drawing.Size(90, 39);
+            this.butBuild.TabIndex = 18;
+            this.butBuild.Text = "Построить \r\nдиагрмму";
+            this.butBuild.UseVisualStyleBackColor = true;
+            this.butBuild.Click += new System.EventHandler(this.butBuild_Click);
             // 
             // groupBox3
             // 
@@ -444,78 +512,11 @@
             this.butResult.UseVisualStyleBackColor = true;
             this.butResult.Click += new System.EventHandler(this.butResult_Click);
             // 
-            // butBuild
-            // 
-            this.butBuild.Location = new System.Drawing.Point(536, 33);
-            this.butBuild.Name = "butBuild";
-            this.butBuild.Size = new System.Drawing.Size(90, 39);
-            this.butBuild.TabIndex = 18;
-            this.butBuild.Text = "Построить \r\nдиагрмму";
-            this.butBuild.UseVisualStyleBackColor = true;
-            this.butBuild.Click += new System.EventHandler(this.butBuild_Click);
-            // 
-            // panelDiagram
-            // 
-            this.panelDiagram.BackgroundImage = global::IntelligenceSystem.Properties.Resources._Diagramma1;
-            this.panelDiagram.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panelDiagram.ContextMenuStrip = this.contextMenuDiagram;
-            this.panelDiagram.Controls.Add(this.panelKeelResonanse);
-            this.panelDiagram.Controls.Add(this.panelBortResonanse);
-            this.panelDiagram.Location = new System.Drawing.Point(3, 18);
-            this.panelDiagram.Name = "panelDiagram";
-            this.panelDiagram.Size = new System.Drawing.Size(635, 317);
-            this.panelDiagram.TabIndex = 0;
-            // 
-            // panelKeelResonanse
-            // 
-            this.panelKeelResonanse.Location = new System.Drawing.Point(386, -3);
-            this.panelKeelResonanse.Name = "panelKeelResonanse";
-            this.panelKeelResonanse.Size = new System.Drawing.Size(90, 301);
-            this.panelKeelResonanse.TabIndex = 1;
-            this.panelKeelResonanse.Visible = false;
-            // 
-            // panelBortResonanse
-            // 
-            this.panelBortResonanse.Location = new System.Drawing.Point(158, -3);
-            this.panelBortResonanse.Name = "panelBortResonanse";
-            this.panelBortResonanse.Size = new System.Drawing.Size(66, 301);
-            this.panelBortResonanse.TabIndex = 0;
-            this.panelBortResonanse.Visible = false;
-            // 
-            // ReloadToolStripMenuItem
-            // 
-            this.ReloadToolStripMenuItem.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ReloadToolStripMenuItem.Image = global::IntelligenceSystem.Properties.Resources.Button_Reload;
-            this.ReloadToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.ReloadToolStripMenuItem.Name = "ReloadToolStripMenuItem";
-            this.ReloadToolStripMenuItem.Size = new System.Drawing.Size(140, 26);
-            this.ReloadToolStripMenuItem.Text = "Обновить";
-            this.ReloadToolStripMenuItem.Click += new System.EventHandler(this.ReloadToolStripMenuItem_Click);
-            // 
-            // ClearToolStripMenuItem
-            // 
-            this.ClearToolStripMenuItem.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ClearToolStripMenuItem.Image = global::IntelligenceSystem.Properties.Resources.RSS_Feed_2;
-            this.ClearToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.ClearToolStripMenuItem.Name = "ClearToolStripMenuItem";
-            this.ClearToolStripMenuItem.Size = new System.Drawing.Size(140, 26);
-            this.ClearToolStripMenuItem.Text = "Очистить";
-            this.ClearToolStripMenuItem.Click += new System.EventHandler(this.ClearToolStripMenuItem_Click);
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(536, 134);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(90, 45);
-            this.button1.TabIndex = 19;
-            this.button1.Text = "Условная \r\nвероятность";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
             // RollingDiagramma
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(997, 662);
+            this.ClientSize = new System.Drawing.Size(1017, 686);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupDiagramma);
@@ -528,6 +529,7 @@
             this.Text = "Контроль резонансных режимов качки на волнении";
             this.Load += new System.EventHandler(this.RollingDiagramma_Load);
             this.groupDiagramma.ResumeLayout(false);
+            this.panelDiagram.ResumeLayout(false);
             this.contextMenuDiagram.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.visualStyler1)).EndInit();
             this.groupBox2.ResumeLayout(false);
@@ -537,7 +539,6 @@
             this.groupBox3.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
-            this.panelDiagram.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -586,7 +587,7 @@
         private System.Windows.Forms.Label labelLengthShip;
         private System.Windows.Forms.Button butResult;
         private System.Windows.Forms.Button butBuild;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button butResultProbability;
     }
 }
 
