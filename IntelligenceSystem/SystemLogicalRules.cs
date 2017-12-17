@@ -15,18 +15,6 @@ namespace IntelligenceSystem
 
         }
 
-        private void SystemLogical()
-        {
-            for (int i = 0; i <= 2; i++)
-            {
-                if ((_x1[i] == _a1[i]) && (_x2[i] == _a2[i]))
-                {
-                    procedurepi(i);
-                }
-            }
-
-        }
-
         public string LogicFunc(double lambda, double v, double phi, double b, double t, double h)
         {
             if ((lambda <= 0) || (v <= 0) || (b <= 0) || (t <= 0) || (h <= 0))
@@ -53,9 +41,9 @@ namespace IntelligenceSystem
 
                 double tauPsi = 2.5 * Math.Sqrt(t);
 
-                // Аналих и вывод результата:
+                // Анализ и вывод результата:
 
-                string strResult = "Резонансных периодов не обнаружено.";
+                string strResult = "";
 
                 strResult += RuleFirst(tauK, tauTheta);
 
@@ -63,7 +51,7 @@ namespace IntelligenceSystem
 
                 strResult += RuleThird(tauK, tauPsi);
 
-                return strResult;
+                return strResult == "" ? "Резонансных периодов не обнаружено." : strResult;
             }
         }
 
