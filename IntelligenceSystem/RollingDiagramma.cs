@@ -16,6 +16,7 @@ namespace IntelligenceSystem
 
         DataBase data_base = new DataBase();
         SystemLogicalRules system_logic;
+        ConditionalProbability conditional_probability = new ConditionalProbability();
         public RollingDiagramma()
         {
             InitializeComponent();
@@ -45,6 +46,10 @@ namespace IntelligenceSystem
 
             system_logic = new SystemLogicalRules(variant_base.m_waveLength, variant_base.m_speed, variant_base.m_weight, 
                                                      variant_base.m_draft, variant_base.m_metacentricHeight);
+
+           // conditional_probability.MDhe1 = variant_base.m_val3.ToString();
+          //  textResult.Text += Convert.ToString(conditional_probability.GetProbability(variant_base.m_val1, variant_base.m_val0, variant_base.m_val2, variant_base.m_val3, variant_base.m_val4));
+
         }
         private void ClearToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -108,7 +113,16 @@ namespace IntelligenceSystem
 
         private void butResultProbability_Click(object sender, EventArgs e)
         {
-
+            double probability = conditional_probability.GetProbability(double.Parse(textPHE.Text), double.Parse(textPE.Text),
+                                     double.Parse(textPHNOTE.Text), double.Parse(textMDHE1.Text), double.Parse(textMDHE2.Text));
+            if (probability < 0.5)
+            {
+                textResult.Text += Environment.NewLine + string.Format(@"Достоверность возникновения сильной резонансной качки {0}", probability);
+            } else
+            {
+                textResult.Text += Environment.NewLine + string.Format(@"Достоверность возникновения сильной резонансной качки {0}
+                                                                         Рекомендация – изменить курсовой угол и скорость судна, используя диаграмму качки.", probability);
+            }
         }
 
      
