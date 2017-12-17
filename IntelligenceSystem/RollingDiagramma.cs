@@ -120,8 +120,7 @@ namespace IntelligenceSystem
                 textResult.Text += Environment.NewLine + string.Format(@"Достоверность возникновения сильной резонансной качки {0}", probability);
             } else
             {
-                textResult.Text += Environment.NewLine + string.Format(@"Достоверность возникновения сильной резонансной качки {0}
-                                                                         Рекомендация – изменить курсовой угол и скорость судна, используя диаграмму качки.", probability);
+                textResult.Text += Environment.NewLine + string.Format(@"Достоверность возникновения сильной резонансной качки {0}{1}{1}Рекомендация – изменить курсовой угол и скорость судна, используя диаграмму качки.", probability, Environment.NewLine);
             }
         }
 
