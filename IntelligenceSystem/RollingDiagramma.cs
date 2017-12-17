@@ -65,8 +65,15 @@ namespace IntelligenceSystem
 
         private void butResult_Click(object sender, EventArgs e)
         {
-            textResult.Text = system_logic.LogicFunc(Convert.ToDouble(textHeadingAngle.Text));
-            textResult.Text += Environment.NewLine + string.Format("При {0} градусах кусового угла!", textHeadingAngle.Text);
+            try
+            {
+                textResult.Text = system_logic.LogicFunc(Convert.ToDouble(textHeadingAngle.Text));
+                textResult.Text += Environment.NewLine + string.Format("При {0} градусах кусового угла!", textHeadingAngle.Text);
+            }
+            catch
+            {
+                MessageBox.Show("Проверте правильность введенных полей!", "Ошибка ввода!");
+            }
            // ShowResonance();
         }
         private void ShowResonance()
@@ -120,7 +127,7 @@ namespace IntelligenceSystem
                 textResult.Text += Environment.NewLine + string.Format(@"Достоверность возникновения сильной резонансной качки {0}", probability);
             } else
             {
-                textResult.Text += Environment.NewLine + string.Format(@"Достоверность возникновения сильной резонансной качки {0}{1}{1}Рекомендация – изменить курсовой угол и скорость судна, используя диаграмму качки.", probability, Environment.NewLine);
+                textResult.Text += Environment.NewLine + string.Format(@"{1}Достоверность возникновения сильной резонансной качки {0}{1}{1}Рекомендация – изменить курсовой угол и скорость судна, используя диаграмму качки.", probability, Environment.NewLine);
             }
         }
 
