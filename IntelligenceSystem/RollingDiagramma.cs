@@ -39,8 +39,7 @@ namespace IntelligenceSystem
             textSpeedShip.Text = variant_base.m_speed.ToString();
             textWavelength.Text = variant_base.m_waveLength.ToString();
             textAmplityda.Text = variant_base.m_thetaM.ToString();
-            textResult.Text = system_logic.LogicFunc(variant_base.m_waveLength, variant_base.m_speed, 90, variant_base.m_weight,
-                                          variant_base.m_draft, variant_base.m_metacentricHeight);
+           
         }
         private void ClearToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -57,6 +56,14 @@ namespace IntelligenceSystem
         private void butResult_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void butResult_Click_1(object sender, EventArgs e)
+        {
+            Variant variant_base = data_base.GetVariant(5);
+            textResult.Text = system_logic.LogicFunc(variant_base.m_waveLength, variant_base.m_speed, Convert.ToDouble(textHeadingAngle.Text), variant_base.m_weight,
+                                         variant_base.m_draft, variant_base.m_metacentricHeight);
+            textResult.Text += string.Format("При {0} градусах", textHeadingAngle.Text); 
         }
     }
 }

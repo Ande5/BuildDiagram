@@ -483,12 +483,13 @@
             this.butResult.TabIndex = 16;
             this.butResult.Text = "Считать";
             this.butResult.UseVisualStyleBackColor = true;
+            this.butResult.Click += new System.EventHandler(this.butResult_Click_1);
             // 
             // RollingDiagramma
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1007, 674);
+            this.ClientSize = new System.Drawing.Size(1017, 686);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupDiagramma);
