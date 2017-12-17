@@ -137,6 +137,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Anchor.ico" />
+    <None Include="Resources\-Diagramma1.png" />
     <None Include="Resources\RSS_Feed_2.png" />
     <None Include="Resources\Button_Reload.png" />
   </ItemGroup>

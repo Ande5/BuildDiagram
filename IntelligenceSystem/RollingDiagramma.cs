@@ -78,12 +78,12 @@ namespace IntelligenceSystem
                 }
             }
             panelBortResonanse.BackColor = Color.FromArgb(100, 0, 0, 0);
-            panelBortResonanse.Location = new Point(resonanse_bort[0] + 140, -3);
+            panelBortResonanse.Location = new Point(resonanse_bort[0] + 135, 3);
             panelBortResonanse.Width = resonanse_bort[resonanse_bort.Count-1]-20;
             panelBortResonanse.Visible = true;
 
             panelKeelResonanse.BackColor = Color.FromArgb(100, 0, 0, 0);
-            panelKeelResonanse.Location = new Point(resonanse_keel[0] + 206, -3);
+            panelKeelResonanse.Location = new Point(resonanse_keel[0] + 206, 3);
             panelKeelResonanse.Width = resonanse_keel[resonanse_keel.Count - 1] - 20;
             panelKeelResonanse.Visible = true;
         }
