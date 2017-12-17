@@ -40,7 +40,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.visualStyler1 = new SkinSoft.VisualStyler.VisualStyler(this.components);
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.textResult = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
@@ -162,7 +162,7 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.textBox9);
+            this.groupBox2.Controls.Add(this.textResult);
             this.groupBox2.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.groupBox2.Location = new System.Drawing.Point(659, 12);
             this.groupBox2.Name = "groupBox2";
@@ -171,16 +171,15 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Вычисления резонансных режимов качки";
             // 
-            // textBox9
+            // textResult
             // 
-            this.textBox9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox9.Location = new System.Drawing.Point(33, 33);
-            this.textBox9.Multiline = true;
-            this.textBox9.Name = "textBox9";
-            this.textBox9.ReadOnly = true;
-            this.textBox9.Size = new System.Drawing.Size(273, 222);
-            this.textBox9.TabIndex = 0;
-            this.textBox9.Text = "вававав";
+            this.textResult.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textResult.Location = new System.Drawing.Point(33, 33);
+            this.textResult.Multiline = true;
+            this.textResult.Name = "textResult";
+            this.textResult.ReadOnly = true;
+            this.textResult.Size = new System.Drawing.Size(273, 222);
+            this.textResult.TabIndex = 0;
             // 
             // groupBox1
             // 
@@ -489,7 +488,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(997, 662);
+            this.ClientSize = new System.Drawing.Size(1007, 674);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupDiagramma);
@@ -527,7 +526,7 @@
         private System.Windows.Forms.ToolStripMenuItem ReloadToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ClearToolStripMenuItem;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.TextBox textResult;
         private System.Windows.Forms.ToolStripMenuItem ControlWindowToolStripMenuItem;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox3;
