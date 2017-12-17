@@ -31,27 +31,22 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RollingDiagramma));
             this.groupDiagramma = new System.Windows.Forms.GroupBox();
-            this.panelDiagram = new System.Windows.Forms.Panel();
             this.contextMenuDiagram = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.ReloadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ClearToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ControlWindowToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.panelKeelResonanse = new System.Windows.Forms.Panel();
-            this.panelBortResonanse = new System.Windows.Forms.Panel();
             this.visualStyler1 = new SkinSoft.VisualStyler.VisualStyler(this.components);
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.textResult = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.textMDHE2 = new System.Windows.Forms.TextBox();
+            this.textMDHE1 = new System.Windows.Forms.TextBox();
+            this.textPHNOTE = new System.Windows.Forms.TextBox();
+            this.textPHE = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.textPE = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.textAmplityda = new System.Windows.Forms.TextBox();
@@ -72,14 +67,20 @@
             this.labelLengthShip = new System.Windows.Forms.Label();
             this.butResult = new System.Windows.Forms.Button();
             this.butBuild = new System.Windows.Forms.Button();
+            this.panelDiagram = new System.Windows.Forms.Panel();
+            this.panelKeelResonanse = new System.Windows.Forms.Panel();
+            this.panelBortResonanse = new System.Windows.Forms.Panel();
+            this.ReloadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ClearToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupDiagramma.SuspendLayout();
-            this.panelDiagram.SuspendLayout();
             this.contextMenuDiagram.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.visualStyler1)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
+            this.panelDiagram.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupDiagramma
@@ -94,18 +95,6 @@
             this.groupDiagramma.TabStop = false;
             this.groupDiagramma.Text = "Диаграмма качки";
             // 
-            // panelDiagram
-            // 
-            this.panelDiagram.BackgroundImage = global::IntelligenceSystem.Properties.Resources._Diagramma1;
-            this.panelDiagram.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panelDiagram.ContextMenuStrip = this.contextMenuDiagram;
-            this.panelDiagram.Controls.Add(this.panelKeelResonanse);
-            this.panelDiagram.Controls.Add(this.panelBortResonanse);
-            this.panelDiagram.Location = new System.Drawing.Point(3, 18);
-            this.panelDiagram.Name = "panelDiagram";
-            this.panelDiagram.Size = new System.Drawing.Size(635, 317);
-            this.panelDiagram.TabIndex = 0;
-            // 
             // contextMenuDiagram
             // 
             this.contextMenuDiagram.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -115,48 +104,12 @@
             this.contextMenuDiagram.Name = "contextMenuDiagram";
             this.contextMenuDiagram.Size = new System.Drawing.Size(141, 82);
             // 
-            // ReloadToolStripMenuItem
-            // 
-            this.ReloadToolStripMenuItem.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ReloadToolStripMenuItem.Image = global::IntelligenceSystem.Properties.Resources.Button_Reload;
-            this.ReloadToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.ReloadToolStripMenuItem.Name = "ReloadToolStripMenuItem";
-            this.ReloadToolStripMenuItem.Size = new System.Drawing.Size(140, 26);
-            this.ReloadToolStripMenuItem.Text = "Обновить";
-            this.ReloadToolStripMenuItem.Click += new System.EventHandler(this.ReloadToolStripMenuItem_Click);
-            // 
-            // ClearToolStripMenuItem
-            // 
-            this.ClearToolStripMenuItem.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ClearToolStripMenuItem.Image = global::IntelligenceSystem.Properties.Resources.RSS_Feed_2;
-            this.ClearToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.ClearToolStripMenuItem.Name = "ClearToolStripMenuItem";
-            this.ClearToolStripMenuItem.Size = new System.Drawing.Size(140, 26);
-            this.ClearToolStripMenuItem.Text = "Очистить";
-            this.ClearToolStripMenuItem.Click += new System.EventHandler(this.ClearToolStripMenuItem_Click);
-            // 
             // ControlWindowToolStripMenuItem
             // 
             this.ControlWindowToolStripMenuItem.Name = "ControlWindowToolStripMenuItem";
             this.ControlWindowToolStripMenuItem.Size = new System.Drawing.Size(140, 26);
             this.ControlWindowToolStripMenuItem.Text = "Свернуть";
             this.ControlWindowToolStripMenuItem.Click += new System.EventHandler(this.ControlWindowToolStripMenuItem_Click);
-            // 
-            // panelKeelResonanse
-            // 
-            this.panelKeelResonanse.Location = new System.Drawing.Point(386, -3);
-            this.panelKeelResonanse.Name = "panelKeelResonanse";
-            this.panelKeelResonanse.Size = new System.Drawing.Size(90, 301);
-            this.panelKeelResonanse.TabIndex = 1;
-            this.panelKeelResonanse.Visible = false;
-            // 
-            // panelBortResonanse
-            // 
-            this.panelBortResonanse.Location = new System.Drawing.Point(158, -3);
-            this.panelBortResonanse.Name = "panelBortResonanse";
-            this.panelBortResonanse.Size = new System.Drawing.Size(66, 301);
-            this.panelBortResonanse.TabIndex = 0;
-            this.panelBortResonanse.Visible = false;
             // 
             // visualStyler1
             // 
@@ -178,15 +131,16 @@
             // textResult
             // 
             this.textResult.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textResult.Location = new System.Drawing.Point(33, 33);
+            this.textResult.Location = new System.Drawing.Point(17, 33);
             this.textResult.Multiline = true;
             this.textResult.Name = "textResult";
             this.textResult.ReadOnly = true;
-            this.textResult.Size = new System.Drawing.Size(273, 222);
+            this.textResult.Size = new System.Drawing.Size(298, 222);
             this.textResult.TabIndex = 0;
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.butBuild);
             this.groupBox1.Controls.Add(this.groupBox3);
             this.groupBox1.Controls.Add(this.groupBox4);
@@ -202,15 +156,15 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.textBox4);
-            this.groupBox3.Controls.Add(this.textBox5);
-            this.groupBox3.Controls.Add(this.textBox6);
-            this.groupBox3.Controls.Add(this.textBox7);
+            this.groupBox3.Controls.Add(this.textMDHE2);
+            this.groupBox3.Controls.Add(this.textMDHE1);
+            this.groupBox3.Controls.Add(this.textPHNOTE);
+            this.groupBox3.Controls.Add(this.textPHE);
             this.groupBox3.Controls.Add(this.label4);
             this.groupBox3.Controls.Add(this.label5);
             this.groupBox3.Controls.Add(this.label6);
             this.groupBox3.Controls.Add(this.label7);
-            this.groupBox3.Controls.Add(this.textBox8);
+            this.groupBox3.Controls.Add(this.textPE);
             this.groupBox3.Controls.Add(this.label8);
             this.groupBox3.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.groupBox3.ForeColor = System.Drawing.Color.Black;
@@ -221,37 +175,37 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Исходные оценки вероятности";
             // 
-            // textBox4
+            // textMDHE2
             // 
-            this.textBox4.ForeColor = System.Drawing.Color.Black;
-            this.textBox4.Location = new System.Drawing.Point(98, 194);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(86, 22);
-            this.textBox4.TabIndex = 22;
+            this.textMDHE2.ForeColor = System.Drawing.Color.Black;
+            this.textMDHE2.Location = new System.Drawing.Point(98, 194);
+            this.textMDHE2.Name = "textMDHE2";
+            this.textMDHE2.Size = new System.Drawing.Size(86, 22);
+            this.textMDHE2.TabIndex = 22;
             // 
-            // textBox5
+            // textMDHE1
             // 
-            this.textBox5.ForeColor = System.Drawing.Color.Black;
-            this.textBox5.Location = new System.Drawing.Point(98, 151);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(87, 22);
-            this.textBox5.TabIndex = 21;
+            this.textMDHE1.ForeColor = System.Drawing.Color.Black;
+            this.textMDHE1.Location = new System.Drawing.Point(98, 151);
+            this.textMDHE1.Name = "textMDHE1";
+            this.textMDHE1.Size = new System.Drawing.Size(87, 22);
+            this.textMDHE1.TabIndex = 21;
             // 
-            // textBox6
+            // textPHNOTE
             // 
-            this.textBox6.ForeColor = System.Drawing.Color.Black;
-            this.textBox6.Location = new System.Drawing.Point(98, 111);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(87, 22);
-            this.textBox6.TabIndex = 20;
+            this.textPHNOTE.ForeColor = System.Drawing.Color.Black;
+            this.textPHNOTE.Location = new System.Drawing.Point(98, 111);
+            this.textPHNOTE.Name = "textPHNOTE";
+            this.textPHNOTE.Size = new System.Drawing.Size(87, 22);
+            this.textPHNOTE.TabIndex = 20;
             // 
-            // textBox7
+            // textPHE
             // 
-            this.textBox7.ForeColor = System.Drawing.Color.Black;
-            this.textBox7.Location = new System.Drawing.Point(98, 69);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(87, 22);
-            this.textBox7.TabIndex = 19;
+            this.textPHE.ForeColor = System.Drawing.Color.Black;
+            this.textPHE.Location = new System.Drawing.Point(98, 69);
+            this.textPHE.Name = "textPHE";
+            this.textPHE.Size = new System.Drawing.Size(87, 22);
+            this.textPHE.TabIndex = 19;
             // 
             // label4
             // 
@@ -293,13 +247,13 @@
             this.label7.TabIndex = 15;
             this.label7.Text = "P(H/E)";
             // 
-            // textBox8
+            // textPE
             // 
-            this.textBox8.ForeColor = System.Drawing.Color.Black;
-            this.textBox8.Location = new System.Drawing.Point(98, 27);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(87, 22);
-            this.textBox8.TabIndex = 14;
+            this.textPE.ForeColor = System.Drawing.Color.Black;
+            this.textPE.Location = new System.Drawing.Point(98, 27);
+            this.textPE.Name = "textPE";
+            this.textPE.Size = new System.Drawing.Size(87, 22);
+            this.textPE.TabIndex = 14;
             // 
             // label8
             // 
@@ -500,11 +454,68 @@
             this.butBuild.UseVisualStyleBackColor = true;
             this.butBuild.Click += new System.EventHandler(this.butBuild_Click);
             // 
+            // panelDiagram
+            // 
+            this.panelDiagram.BackgroundImage = global::IntelligenceSystem.Properties.Resources._Diagramma1;
+            this.panelDiagram.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panelDiagram.ContextMenuStrip = this.contextMenuDiagram;
+            this.panelDiagram.Controls.Add(this.panelKeelResonanse);
+            this.panelDiagram.Controls.Add(this.panelBortResonanse);
+            this.panelDiagram.Location = new System.Drawing.Point(3, 18);
+            this.panelDiagram.Name = "panelDiagram";
+            this.panelDiagram.Size = new System.Drawing.Size(635, 317);
+            this.panelDiagram.TabIndex = 0;
+            // 
+            // panelKeelResonanse
+            // 
+            this.panelKeelResonanse.Location = new System.Drawing.Point(386, -3);
+            this.panelKeelResonanse.Name = "panelKeelResonanse";
+            this.panelKeelResonanse.Size = new System.Drawing.Size(90, 301);
+            this.panelKeelResonanse.TabIndex = 1;
+            this.panelKeelResonanse.Visible = false;
+            // 
+            // panelBortResonanse
+            // 
+            this.panelBortResonanse.Location = new System.Drawing.Point(158, -3);
+            this.panelBortResonanse.Name = "panelBortResonanse";
+            this.panelBortResonanse.Size = new System.Drawing.Size(66, 301);
+            this.panelBortResonanse.TabIndex = 0;
+            this.panelBortResonanse.Visible = false;
+            // 
+            // ReloadToolStripMenuItem
+            // 
+            this.ReloadToolStripMenuItem.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ReloadToolStripMenuItem.Image = global::IntelligenceSystem.Properties.Resources.Button_Reload;
+            this.ReloadToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.ReloadToolStripMenuItem.Name = "ReloadToolStripMenuItem";
+            this.ReloadToolStripMenuItem.Size = new System.Drawing.Size(140, 26);
+            this.ReloadToolStripMenuItem.Text = "Обновить";
+            this.ReloadToolStripMenuItem.Click += new System.EventHandler(this.ReloadToolStripMenuItem_Click);
+            // 
+            // ClearToolStripMenuItem
+            // 
+            this.ClearToolStripMenuItem.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ClearToolStripMenuItem.Image = global::IntelligenceSystem.Properties.Resources.RSS_Feed_2;
+            this.ClearToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.ClearToolStripMenuItem.Name = "ClearToolStripMenuItem";
+            this.ClearToolStripMenuItem.Size = new System.Drawing.Size(140, 26);
+            this.ClearToolStripMenuItem.Text = "Очистить";
+            this.ClearToolStripMenuItem.Click += new System.EventHandler(this.ClearToolStripMenuItem_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(536, 134);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(90, 45);
+            this.button1.TabIndex = 19;
+            this.button1.Text = "Условная \r\nвероятность";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // RollingDiagramma
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1037, 710);
+            this.ClientSize = new System.Drawing.Size(997, 662);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupDiagramma);
@@ -517,7 +528,6 @@
             this.Text = "Контроль резонансных режимов качки на волнении";
             this.Load += new System.EventHandler(this.RollingDiagramma_Load);
             this.groupDiagramma.ResumeLayout(false);
-            this.panelDiagram.ResumeLayout(false);
             this.contextMenuDiagram.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.visualStyler1)).EndInit();
             this.groupBox2.ResumeLayout(false);
@@ -527,6 +537,7 @@
             this.groupBox3.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
+            this.panelDiagram.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -546,15 +557,15 @@
         private System.Windows.Forms.ToolStripMenuItem ControlWindowToolStripMenuItem;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox textMDHE2;
+        private System.Windows.Forms.TextBox textMDHE1;
+        private System.Windows.Forms.TextBox textPHNOTE;
+        private System.Windows.Forms.TextBox textPHE;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox textPE;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.TextBox textAmplityda;
@@ -575,6 +586,7 @@
         private System.Windows.Forms.Label labelLengthShip;
         private System.Windows.Forms.Button butResult;
         private System.Windows.Forms.Button butBuild;
+        private System.Windows.Forms.Button button1;
     }
 }
 

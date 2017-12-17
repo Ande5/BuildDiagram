@@ -24,7 +24,7 @@ namespace IntelligenceSystem
 
         private void RollingDiagramma_Load(object sender, EventArgs e)
         {
-            LoadVariant(data_base.GetVariant(5));
+            LoadVariant(data_base.GetVariant(2));
         }
 
         private void LoadVariant(Variant variant_base)
@@ -36,6 +36,11 @@ namespace IntelligenceSystem
             textSpeedShip.Text = variant_base.m_speed.ToString();
             textWavelength.Text = variant_base.m_waveLength.ToString();
             textAmplityda.Text = variant_base.m_thetaM.ToString();
+
+            textPE.Text = variant_base.m_val0.ToString();
+            textPHE.Text = variant_base.m_val1.ToString();
+           // textPHNOTE.Text = variant_base.
+
             system_logic = new SystemLogicalRules(variant_base.m_waveLength, variant_base.m_speed, variant_base.m_weight, 
                                                      variant_base.m_draft, variant_base.m_metacentricHeight);
         }
