@@ -71,6 +71,7 @@
             this.textLengthShip = new System.Windows.Forms.TextBox();
             this.labelLengthShip = new System.Windows.Forms.Label();
             this.butResult = new System.Windows.Forms.Button();
+            this.butBuild = new System.Windows.Forms.Button();
             this.groupDiagramma.SuspendLayout();
             this.panelDiagram.SuspendLayout();
             this.contextMenuDiagram.SuspendLayout();
@@ -112,7 +113,7 @@
             this.ClearToolStripMenuItem,
             this.ControlWindowToolStripMenuItem});
             this.contextMenuDiagram.Name = "contextMenuDiagram";
-            this.contextMenuDiagram.Size = new System.Drawing.Size(141, 82);
+            this.contextMenuDiagram.Size = new System.Drawing.Size(157, 104);
             // 
             // ReloadToolStripMenuItem
             // 
@@ -120,8 +121,9 @@
             this.ReloadToolStripMenuItem.Image = global::IntelligenceSystem.Properties.Resources.Button_Reload;
             this.ReloadToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.ReloadToolStripMenuItem.Name = "ReloadToolStripMenuItem";
-            this.ReloadToolStripMenuItem.Size = new System.Drawing.Size(140, 26);
+            this.ReloadToolStripMenuItem.Size = new System.Drawing.Size(156, 26);
             this.ReloadToolStripMenuItem.Text = "Обновить";
+            this.ReloadToolStripMenuItem.Click += new System.EventHandler(this.ReloadToolStripMenuItem_Click);
             // 
             // ClearToolStripMenuItem
             // 
@@ -129,14 +131,14 @@
             this.ClearToolStripMenuItem.Image = global::IntelligenceSystem.Properties.Resources.RSS_Feed_2;
             this.ClearToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.ClearToolStripMenuItem.Name = "ClearToolStripMenuItem";
-            this.ClearToolStripMenuItem.Size = new System.Drawing.Size(140, 26);
+            this.ClearToolStripMenuItem.Size = new System.Drawing.Size(156, 26);
             this.ClearToolStripMenuItem.Text = "Очистить";
             this.ClearToolStripMenuItem.Click += new System.EventHandler(this.ClearToolStripMenuItem_Click);
             // 
             // ControlWindowToolStripMenuItem
             // 
             this.ControlWindowToolStripMenuItem.Name = "ControlWindowToolStripMenuItem";
-            this.ControlWindowToolStripMenuItem.Size = new System.Drawing.Size(140, 26);
+            this.ControlWindowToolStripMenuItem.Size = new System.Drawing.Size(156, 26);
             this.ControlWindowToolStripMenuItem.Text = "Свернуть";
             this.ControlWindowToolStripMenuItem.Click += new System.EventHandler(this.ControlWindowToolStripMenuItem_Click);
             // 
@@ -185,6 +187,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.butBuild);
             this.groupBox1.Controls.Add(this.groupBox3);
             this.groupBox1.Controls.Add(this.groupBox4);
             this.groupBox1.Controls.Add(this.butResult);
@@ -479,13 +482,23 @@
             // 
             // butResult
             // 
-            this.butResult.Location = new System.Drawing.Point(542, 33);
+            this.butResult.Location = new System.Drawing.Point(536, 82);
             this.butResult.Name = "butResult";
-            this.butResult.Size = new System.Drawing.Size(75, 23);
+            this.butResult.Size = new System.Drawing.Size(90, 25);
             this.butResult.TabIndex = 16;
             this.butResult.Text = "Считать";
             this.butResult.UseVisualStyleBackColor = true;
             this.butResult.Click += new System.EventHandler(this.butResult_Click);
+            // 
+            // butBuild
+            // 
+            this.butBuild.Location = new System.Drawing.Point(536, 33);
+            this.butBuild.Name = "butBuild";
+            this.butBuild.Size = new System.Drawing.Size(90, 39);
+            this.butBuild.TabIndex = 18;
+            this.butBuild.Text = "Построить \r\nдиагрмму";
+            this.butBuild.UseVisualStyleBackColor = true;
+            this.butBuild.Click += new System.EventHandler(this.butBuild_Click);
             // 
             // RollingDiagramma
             // 
@@ -561,6 +574,7 @@
         private System.Windows.Forms.TextBox textLengthShip;
         private System.Windows.Forms.Label labelLengthShip;
         private System.Windows.Forms.Button butResult;
+        private System.Windows.Forms.Button butBuild;
     }
 }
 

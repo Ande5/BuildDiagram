@@ -55,11 +55,10 @@ namespace IntelligenceSystem
         {
             textResult.Text = system_logic.LogicFunc(Convert.ToDouble(textHeadingAngle.Text));
             textResult.Text += Environment.NewLine + string.Format("При {0} градусах кусового угла!", textHeadingAngle.Text);
-            ShowResonance();
+           // ShowResonance();
         }
         private void ShowResonance()
         {
-        
             List<int> resonanse_bort = new List<int>();
             List<int> resonanse_keel= new List<int>();
             List<int> resonanse_bort_parm = new List<int>();
@@ -80,14 +79,24 @@ namespace IntelligenceSystem
             }
             panelBortResonanse.BackColor = Color.FromArgb(100, 0, 0, 0);
             panelBortResonanse.Location = new Point(resonanse_bort[0] + 140, -3);
-            //panel2.Size = new Size(resonanse_bort[resonanse_bort.Count - 1], 50);
             panelBortResonanse.Width = resonanse_bort[resonanse_bort.Count-1]-20;
             panelBortResonanse.Visible = true;
 
             panelKeelResonanse.BackColor = Color.FromArgb(100, 0, 0, 0);
-            panelKeelResonanse.Location = new Point(resonanse_keel[0] + 208, -3);
+            panelKeelResonanse.Location = new Point(resonanse_keel[0] + 206, -3);
             panelKeelResonanse.Width = resonanse_keel[resonanse_keel.Count - 1] - 20;
             panelKeelResonanse.Visible = true;
+        }
+
+        private void butBuild_Click(object sender, EventArgs e)
+        {
+            ShowResonance();
+            butBuild.Enabled = false;
+        }
+
+        private void ReloadToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ShowResonance();
         }
 
      
