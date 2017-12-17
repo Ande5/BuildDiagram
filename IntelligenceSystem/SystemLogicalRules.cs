@@ -4,34 +4,20 @@ namespace IntelligenceSystem
 {
     class SystemLogicalRules
     {
-        //private double[] m_X1 = new double[3]; //заданная амплитуда качки
-        //private double[] m_X2 = new double[3];
-        //private double[] m_A1 = new double[3]; // амплитуда сильной качки
-        //private double[] m_A2 = new double[3];
-        //private double[] m_Y = new double[3]; //курсовой угол
+        private double m_lambda;
+        private double m_speed;
+        private double m_B, m_T, m_H;
 
-
-
-        public SystemLogicalRules()
+        public SystemLogicalRules(double lambda, double speed, double B, double T, double H)
         {
-
+            m_lambda = lambda;
+            m_speed = speed;
+            m_B = B; m_T = T; m_H = H;
         }
 
-        //private void SystemLogical()
-        //{
-        //    for (int i = 0; i <= 2; i++)
-        //    {
-        //        if ((_x1[i] == _a1[i]) && (_x2[i] == _a2[i]))
-        //        {
-        //            procedurepi(i);
-        //        }
-        //    }
-
-        //}
-
-        public string LogicFunc(double lambda, double v, double phi, double b, double t, double h)
+        public string LogicFunc(double phi)
         {
-            if ((lambda <= 0) || (v <= 0) || (b <= 0) || (t <= 0) || (h <= 0))
+            if ((m_lambda <= 0) || (m_speed <= 0) || (m_B <= 0) || (m_T <= 0) || (m_H <= 0))
             {
                 return "Данные введены неверно!";
             }
@@ -39,25 +25,25 @@ namespace IntelligenceSystem
             {
                 // Вычисление скорости волны:
 
-                double cw = 1.25 * Math.Sqrt(lambda);
+                double Cw = 1.25 * Math.Sqrt(m_lambda);
 
                 // Вычисление кажущегося периода:
 
-                double tauK = lambda / (cw - v * Math.Cos(phi * Math.PI / 180));
+                double tauK = m_lambda / (Cw - m_speed * Math.Cos(phi * Math.PI / 180));
 
                 // Вычисление собственного периода бортовой качки:
 
-                double c = 0.8;
+                double C = 0.8;
 
-                double tauTheta = c * b / Math.Sqrt(h);
+                double tauTheta = C * m_B / Math.Sqrt(m_H);
 
                 // Вычисление собственного периода килевой качки:
 
-                double tauPsi = 2.5 * Math.Sqrt(t);
+                double tauPsi = 2.5 * Math.Sqrt(m_T);
 
-                // Аналих и вывод результата:
+                // Анализ и вывод результата:
 
-                string strResult = "Резонансных периодов не обнаружено.";
+                string strResult = "";
 
                 strResult += RuleFirst(tauK, tauTheta);
 
@@ -65,7 +51,7 @@ namespace IntelligenceSystem
 
                 strResult += RuleThird(tauK, tauPsi);
 
-                return strResult;
+                return strResult == "" ? "Резонансных периодов не обнаружено." : strResult;
             }
         }
 
@@ -73,21 +59,21 @@ namespace IntelligenceSystem
         {
             if ((tauK / tauTheta > 0.8) && (tauK / tauTheta < 1.2))
                 return "\nОбнаружен основной резонанс бортовой качки!";
-            else return "";
+            else return null;
         }
 
         private string RuleSecond(double tauK, double tauTheta)
         {
             if ((tauK / tauTheta > 1.85) && (tauK / tauTheta < 2.15))
                 return "\nОбнаружен параметрический резонанс бортовой качки!";
-            else return "";
+            else return null;
         }
 
         private string RuleThird(double tauK, double tauPsi)
         {
             if ((tauK / tauPsi > 0.8) && (tauK / tauPsi < 1.2))
                 return "\nОбнаружен основной резонанс килевой качки!";
-            else return "";
+            else return null;
         }
 
     }

@@ -15,21 +15,18 @@ namespace IntelligenceSystem
     {
 
         DataBase data_base = new DataBase();
-        SystemLogicalRules system_logic = new SystemLogicalRules();
+        SystemLogicalRules system_logic;
         public RollingDiagramma()
         {
             InitializeComponent();
            // this.Size = new Size(975, 398);
         }
-     
-        private void Form1_Load(object sender, EventArgs e)
+
+        private void RollingDiagramma_Load(object sender, EventArgs e)
         {
-            panel2.BackColor = Color.FromArgb(100, 0,0,0);
-            panel3.BackColor = Color.FromArgb(100, 0, 0, 0);
-     
             LoadVariant(data_base.GetVariant(5));
-         
         }
+
         private void LoadVariant(Variant variant_base)
         {
             textLengthShip.Text = variant_base.m_length.ToString();
@@ -39,12 +36,13 @@ namespace IntelligenceSystem
             textSpeedShip.Text = variant_base.m_speed.ToString();
             textWavelength.Text = variant_base.m_waveLength.ToString();
             textAmplityda.Text = variant_base.m_thetaM.ToString();
-           
+            system_logic = new SystemLogicalRules(variant_base.m_waveLength, variant_base.m_speed, variant_base.m_weight, 
+                                                     variant_base.m_draft, variant_base.m_metacentricHeight);
         }
         private void ClearToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            panel2.Visible = false;
-            panel3.Visible = false;
+            panelBortResonanse.Visible = false;
+            panelKeelResonanse.Visible = false;
             ClearToolStripMenuItem.Enabled = false;
         }
 
@@ -55,15 +53,43 @@ namespace IntelligenceSystem
 
         private void butResult_Click(object sender, EventArgs e)
         {
-
+            textResult.Text = system_logic.LogicFunc(Convert.ToDouble(textHeadingAngle.Text));
+            textResult.Text += Environment.NewLine + string.Format("При {0} градусах кусового угла!", textHeadingAngle.Text);
+            ShowResonance();
         }
-
-        private void butResult_Click_1(object sender, EventArgs e)
+        private void ShowResonance()
         {
-            Variant variant_base = data_base.GetVariant(5);
-            textResult.Text = system_logic.LogicFunc(variant_base.m_waveLength, variant_base.m_speed, Convert.ToDouble(textHeadingAngle.Text), variant_base.m_weight,
-                                         variant_base.m_draft, variant_base.m_metacentricHeight);
-            textResult.Text += Environment.NewLine+ string.Format("При {0} градусах кусового угла!", textHeadingAngle.Text); 
+        
+            List<int> resonanse_bort = new List<int>();
+            List<int> resonanse_keel= new List<int>();
+            List<int> resonanse_bort_parm = new List<int>();
+            for (int k = 0; k <= 180; k++ )
+            {
+                if (system_logic.LogicFunc(k) == "\nОбнаружен основной резонанс бортовой качки!")
+                {
+                    resonanse_bort.Add(k);
+                }
+                if (system_logic.LogicFunc(k)== "\nОбнаружен основной резонанс килевой качки!")
+                {
+                    resonanse_keel.Add(k);
+                }
+                if (system_logic.LogicFunc(k) == "\nОбнаружен параметрический резонанс бортовой качки!")
+                {
+                    resonanse_bort_parm.Add(k);
+                }
+            }
+            panelBortResonanse.BackColor = Color.FromArgb(100, 0, 0, 0);
+            panelBortResonanse.Location = new Point(resonanse_bort[0] + 140, -3);
+            //panel2.Size = new Size(resonanse_bort[resonanse_bort.Count - 1], 50);
+            panelBortResonanse.Width = resonanse_bort[resonanse_bort.Count-1]-20;
+            panelBortResonanse.Visible = true;
+
+            panelKeelResonanse.BackColor = Color.FromArgb(100, 0, 0, 0);
+            panelKeelResonanse.Location = new Point(resonanse_keel[0] + 208, -3);
+            panelKeelResonanse.Width = resonanse_keel[resonanse_keel.Count - 1] - 20;
+            panelKeelResonanse.Visible = true;
         }
+
+     
     }
 }

@@ -36,8 +36,8 @@
             this.ReloadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ClearToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ControlWindowToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.panelKeelResonanse = new System.Windows.Forms.Panel();
+            this.panelBortResonanse = new System.Windows.Forms.Panel();
             this.visualStyler1 = new SkinSoft.VisualStyler.VisualStyler(this.components);
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.textResult = new System.Windows.Forms.TextBox();
@@ -98,8 +98,8 @@
             this.panelDiagram.BackgroundImage = global::IntelligenceSystem.Properties.Resources._Diagramma2;
             this.panelDiagram.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.panelDiagram.ContextMenuStrip = this.contextMenuDiagram;
-            this.panelDiagram.Controls.Add(this.panel3);
-            this.panelDiagram.Controls.Add(this.panel2);
+            this.panelDiagram.Controls.Add(this.panelKeelResonanse);
+            this.panelDiagram.Controls.Add(this.panelBortResonanse);
             this.panelDiagram.Location = new System.Drawing.Point(3, 18);
             this.panelDiagram.Name = "panelDiagram";
             this.panelDiagram.Size = new System.Drawing.Size(635, 317);
@@ -140,19 +140,21 @@
             this.ControlWindowToolStripMenuItem.Text = "Свернуть";
             this.ControlWindowToolStripMenuItem.Click += new System.EventHandler(this.ControlWindowToolStripMenuItem_Click);
             // 
-            // panel3
+            // panelKeelResonanse
             // 
-            this.panel3.Location = new System.Drawing.Point(386, -3);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(90, 301);
-            this.panel3.TabIndex = 1;
+            this.panelKeelResonanse.Location = new System.Drawing.Point(386, -3);
+            this.panelKeelResonanse.Name = "panelKeelResonanse";
+            this.panelKeelResonanse.Size = new System.Drawing.Size(90, 301);
+            this.panelKeelResonanse.TabIndex = 1;
+            this.panelKeelResonanse.Visible = false;
             // 
-            // panel2
+            // panelBortResonanse
             // 
-            this.panel2.Location = new System.Drawing.Point(158, -3);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(66, 301);
-            this.panel2.TabIndex = 0;
+            this.panelBortResonanse.Location = new System.Drawing.Point(158, -3);
+            this.panelBortResonanse.Name = "panelBortResonanse";
+            this.panelBortResonanse.Size = new System.Drawing.Size(66, 301);
+            this.panelBortResonanse.TabIndex = 0;
+            this.panelBortResonanse.Visible = false;
             // 
             // visualStyler1
             // 
@@ -483,13 +485,13 @@
             this.butResult.TabIndex = 16;
             this.butResult.Text = "Считать";
             this.butResult.UseVisualStyleBackColor = true;
-            this.butResult.Click += new System.EventHandler(this.butResult_Click_1);
+            this.butResult.Click += new System.EventHandler(this.butResult_Click);
             // 
             // RollingDiagramma
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1017, 686);
+            this.ClientSize = new System.Drawing.Size(1037, 710);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupDiagramma);
@@ -500,7 +502,7 @@
             this.Name = "RollingDiagramma";
             this.ShowIcon = false;
             this.Text = "Контроль резонансных режимов качки на волнении";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.Load += new System.EventHandler(this.RollingDiagramma_Load);
             this.groupDiagramma.ResumeLayout(false);
             this.panelDiagram.ResumeLayout(false);
             this.contextMenuDiagram.ResumeLayout(false);
@@ -520,9 +522,9 @@
 
         private System.Windows.Forms.GroupBox groupDiagramma;
         private System.Windows.Forms.Panel panelDiagram;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panelBortResonanse;
         private SkinSoft.VisualStyler.VisualStyler visualStyler1;
-        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panelKeelResonanse;
         private System.Windows.Forms.ContextMenuStrip contextMenuDiagram;
         private System.Windows.Forms.ToolStripMenuItem ReloadToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ClearToolStripMenuItem;
