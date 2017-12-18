@@ -25,7 +25,7 @@ namespace IntelligenceSystem
 
         private void RollingDiagramma_Load(object sender, EventArgs e)
         {
-            LoadVariant(data_base.GetVariant(2));
+            LoadVariant(data_base.GetVariant(5));
         }
 
         private void LoadVariant(Variant variant_base)
