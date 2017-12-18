@@ -18,7 +18,7 @@ namespace IntelligenceSystem
         public double ApparentWavePeriod(double lambda, double V, double fi)
         {
             double Cw =1.25* Math.Pow(lambda,0.5);
-            return lambda / (Cw - V * Math.Cos(fi / 180));
+            return lambda / (Cw - V * Math.Cos(fi *Math.PI/ 180));
         }
         /// <summary>
         /// Собственные колебания бортовой качки

@@ -55,7 +55,9 @@ namespace IntelligenceSystem
         {
             panelBortResonanse.Visible = false;
             panelKeelResonanse.Visible = false;
+            panelBort_ParmResonanse.Visible = false;
             ClearToolStripMenuItem.Enabled = false;
+            butBuild.Enabled = true;
         }
 
         private void ControlWindowToolStripMenuItem_Click(object sender, EventArgs e)
