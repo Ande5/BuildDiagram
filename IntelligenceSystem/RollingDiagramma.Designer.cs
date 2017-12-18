@@ -73,6 +73,10 @@
             this.textLengthShip = new System.Windows.Forms.TextBox();
             this.labelLengthShip = new System.Windows.Forms.Label();
             this.butResult = new System.Windows.Forms.Button();
+            this.panelBort_ParmResonanse = new System.Windows.Forms.Panel();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.textDecision = new System.Windows.Forms.TextBox();
+            this.butResultShow = new System.Windows.Forms.Button();
             this.groupDiagramma.SuspendLayout();
             this.panelDiagram.SuspendLayout();
             this.contextMenuDiagram.SuspendLayout();
@@ -81,6 +85,7 @@
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
+            this.groupBox5.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupDiagramma
@@ -100,6 +105,7 @@
             this.panelDiagram.BackgroundImage = global::IntelligenceSystem.Properties.Resources._Diagramma1;
             this.panelDiagram.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.panelDiagram.ContextMenuStrip = this.contextMenuDiagram;
+            this.panelDiagram.Controls.Add(this.panelBort_ParmResonanse);
             this.panelDiagram.Controls.Add(this.panelKeelResonanse);
             this.panelDiagram.Controls.Add(this.panelBortResonanse);
             this.panelDiagram.Location = new System.Drawing.Point(3, 18);
@@ -171,7 +177,7 @@
             this.groupBox2.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.groupBox2.Location = new System.Drawing.Point(659, 12);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(330, 286);
+            this.groupBox2.Size = new System.Drawing.Size(330, 316);
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Вычисления резонансных режимов качки";
@@ -183,11 +189,12 @@
             this.textResult.Multiline = true;
             this.textResult.Name = "textResult";
             this.textResult.ReadOnly = true;
-            this.textResult.Size = new System.Drawing.Size(298, 222);
+            this.textResult.Size = new System.Drawing.Size(298, 265);
             this.textResult.TabIndex = 0;
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.butResultShow);
             this.groupBox1.Controls.Add(this.butResultProbability);
             this.groupBox1.Controls.Add(this.butBuild);
             this.groupBox1.Controls.Add(this.groupBox3);
@@ -204,7 +211,7 @@
             // 
             // butResultProbability
             // 
-            this.butResultProbability.Location = new System.Drawing.Point(536, 134);
+            this.butResultProbability.Location = new System.Drawing.Point(536, 118);
             this.butResultProbability.Name = "butResultProbability";
             this.butResultProbability.Size = new System.Drawing.Size(90, 45);
             this.butResultProbability.TabIndex = 19;
@@ -506,17 +513,57 @@
             // 
             this.butResult.Location = new System.Drawing.Point(536, 82);
             this.butResult.Name = "butResult";
-            this.butResult.Size = new System.Drawing.Size(90, 25);
+            this.butResult.Size = new System.Drawing.Size(90, 28);
             this.butResult.TabIndex = 16;
             this.butResult.Text = "Считать";
             this.butResult.UseVisualStyleBackColor = true;
             this.butResult.Click += new System.EventHandler(this.butResult_Click);
             // 
+            // panelBort_ParmResonanse
+            // 
+            this.panelBort_ParmResonanse.Location = new System.Drawing.Point(64, 3);
+            this.panelBort_ParmResonanse.Name = "panelBort_ParmResonanse";
+            this.panelBort_ParmResonanse.Size = new System.Drawing.Size(66, 301);
+            this.panelBort_ParmResonanse.TabIndex = 1;
+            this.panelBort_ParmResonanse.Visible = false;
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.Controls.Add(this.textDecision);
+            this.groupBox5.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.groupBox5.Location = new System.Drawing.Point(659, 339);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(330, 316);
+            this.groupBox5.TabIndex = 5;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "Решение";
+            // 
+            // textDecision
+            // 
+            this.textDecision.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textDecision.Location = new System.Drawing.Point(17, 33);
+            this.textDecision.Multiline = true;
+            this.textDecision.Name = "textDecision";
+            this.textDecision.ReadOnly = true;
+            this.textDecision.Size = new System.Drawing.Size(298, 261);
+            this.textDecision.TabIndex = 0;
+            // 
+            // butResultShow
+            // 
+            this.butResultShow.Location = new System.Drawing.Point(536, 173);
+            this.butResultShow.Name = "butResultShow";
+            this.butResultShow.Size = new System.Drawing.Size(90, 45);
+            this.butResultShow.TabIndex = 20;
+            this.butResultShow.Text = "Показать решение";
+            this.butResultShow.UseVisualStyleBackColor = true;
+            this.butResultShow.Click += new System.EventHandler(this.butResultShow_Click);
+            // 
             // RollingDiagramma
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1017, 686);
+            this.ClientSize = new System.Drawing.Size(994, 664);
+            this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupDiagramma);
@@ -539,6 +586,8 @@
             this.groupBox3.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -588,6 +637,10 @@
         private System.Windows.Forms.Button butResult;
         private System.Windows.Forms.Button butBuild;
         private System.Windows.Forms.Button butResultProbability;
+        private System.Windows.Forms.Panel panelBort_ParmResonanse;
+        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.TextBox textDecision;
+        private System.Windows.Forms.Button butResultShow;
     }
 }
 

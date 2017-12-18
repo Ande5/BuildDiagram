@@ -44,8 +44,8 @@ namespace IntelligenceSystem
             textMDHE1.Text = variant_base.m_val3.ToString();
             textMDHE2.Text = variant_base.m_val4.ToString();
 
-            system_logic = new SystemLogicalRules(variant_base.m_waveLength, variant_base.m_speed, variant_base.m_weight, 
-                                                     variant_base.m_draft, variant_base.m_metacentricHeight);
+            system_logic = new SystemLogicalRules(double.Parse(textWavelength.Text), double.Parse(textSpeedShip.Text), double.Parse(textWidthShip.Text),
+                                                    double.Parse(textDraftShip.Text), double.Parse(textMetacentr.Text));
 
            // conditional_probability.MDhe1 = variant_base.m_val3.ToString();
           //  textResult.Text += Convert.ToString(conditional_probability.GetProbability(variant_base.m_val1, variant_base.m_val0, variant_base.m_val2, variant_base.m_val3, variant_base.m_val4));
@@ -105,6 +105,11 @@ namespace IntelligenceSystem
             panelKeelResonanse.Location = new Point(resonanse_keel[0] + 206, 3);
             panelKeelResonanse.Width = resonanse_keel[resonanse_keel.Count - 1] - 20;
             panelKeelResonanse.Visible = true;
+
+            panelBort_ParmResonanse.BackColor = Color.FromArgb(100, 0, 0, 0);
+            panelBort_ParmResonanse.Location = new Point(resonanse_bort_parm[0] + 112, 3);
+            panelBort_ParmResonanse.Width = resonanse_bort_parm[resonanse_bort_parm.Count - 1]-55 ;
+            panelBort_ParmResonanse.Visible = true;
         }
 
         private void butBuild_Click(object sender, EventArgs e)
@@ -129,6 +134,24 @@ namespace IntelligenceSystem
             {
                 textResult.Text += Environment.NewLine + string.Format(@"{1}Достоверность возникновения сильной резонансной качки {0}{1}{1}Рекомендация – изменить курсовой угол и скорость судна, используя диаграмму качки.", probability, Environment.NewLine);
             }
+        }
+
+        private void butResultShow_Click(object sender, EventArgs e)
+        {
+            InfoDecisionMaking info_decision_making = new InfoDecisionMaking();
+            double apparent_wave_period = info_decision_making.ApparentWavePeriod(double.Parse(textWavelength.Text), double.Parse(textSpeedShip.Text), double.Parse(textHeadingAngle.Text));
+            double pitching = info_decision_making.Pitching(double.Parse(textDraftShip.Text));
+            double rolling = info_decision_making.Rolling(double.Parse(textWidthShip.Text), double.Parse(textMetacentr.Text));
+
+            textDecision.Text += string.Format("Кажущийся период волны {0:f4}", apparent_wave_period);
+            textDecision.Text += string.Format("{1}{1}Собственные колебания килевой качки {0:f4}", pitching, Environment.NewLine);
+            textDecision.Text += string.Format("{1}{1}Собственные колебания бортовой качки {0:f4}", rolling, Environment.NewLine);
+
+            double get_bayes_value = conditional_probability.GetBayesValue(double.Parse(textPHE.Text), double.Parse(textPE.Text), double.Parse(textPHNOTE.Text));
+            double get_shortloff_value = conditional_probability.GetShortloffValuie(double.Parse(textMDHE1.Text), double.Parse(textMDHE2.Text));
+
+            textDecision.Text += string.Format("{1}{1}Решение по формуле Байеса {0}", get_bayes_value, Environment.NewLine);
+            textDecision.Text += string.Format("{1}{1}Решение по формуле Шортлиффа {0}", get_shortloff_value, Environment.NewLine);
         }
 
      
