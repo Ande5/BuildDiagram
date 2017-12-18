@@ -120,7 +120,7 @@
             this.ClearToolStripMenuItem,
             this.ControlWindowToolStripMenuItem});
             this.contextMenuDiagram.Name = "contextMenuDiagram";
-            this.contextMenuDiagram.Size = new System.Drawing.Size(141, 82);
+            this.contextMenuDiagram.Size = new System.Drawing.Size(157, 104);
             // 
             // ReloadToolStripMenuItem
             // 
@@ -128,7 +128,7 @@
             this.ReloadToolStripMenuItem.Image = global::IntelligenceSystem.Properties.Resources.Button_Reload;
             this.ReloadToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.ReloadToolStripMenuItem.Name = "ReloadToolStripMenuItem";
-            this.ReloadToolStripMenuItem.Size = new System.Drawing.Size(140, 26);
+            this.ReloadToolStripMenuItem.Size = new System.Drawing.Size(156, 26);
             this.ReloadToolStripMenuItem.Text = "Обновить";
             this.ReloadToolStripMenuItem.Click += new System.EventHandler(this.ReloadToolStripMenuItem_Click);
             // 
@@ -138,16 +138,15 @@
             this.ClearToolStripMenuItem.Image = global::IntelligenceSystem.Properties.Resources.RSS_Feed_2;
             this.ClearToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.ClearToolStripMenuItem.Name = "ClearToolStripMenuItem";
-            this.ClearToolStripMenuItem.Size = new System.Drawing.Size(140, 26);
+            this.ClearToolStripMenuItem.Size = new System.Drawing.Size(156, 26);
             this.ClearToolStripMenuItem.Text = "Очистить";
             this.ClearToolStripMenuItem.Click += new System.EventHandler(this.ClearToolStripMenuItem_Click);
             // 
             // ControlWindowToolStripMenuItem
             // 
             this.ControlWindowToolStripMenuItem.Name = "ControlWindowToolStripMenuItem";
-            this.ControlWindowToolStripMenuItem.Size = new System.Drawing.Size(140, 26);
+            this.ControlWindowToolStripMenuItem.Size = new System.Drawing.Size(156, 26);
             this.ControlWindowToolStripMenuItem.Text = "Свернуть";
-            this.ControlWindowToolStripMenuItem.Click += new System.EventHandler(this.ControlWindowToolStripMenuItem_Click);
             // 
             // panelKeelResonanse
             // 

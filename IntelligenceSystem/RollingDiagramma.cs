@@ -20,7 +20,6 @@ namespace IntelligenceSystem
         public RollingDiagramma()
         {
             InitializeComponent();
-           // this.Size = new Size(975, 398);
         }
 
         private void RollingDiagramma_Load(object sender, EventArgs e)
@@ -46,10 +45,6 @@ namespace IntelligenceSystem
 
             system_logic = new SystemLogicalRules(double.Parse(textWavelength.Text), double.Parse(textSpeedShip.Text), double.Parse(textWidthShip.Text),
                                                     double.Parse(textDraftShip.Text), double.Parse(textMetacentr.Text));
-
-           // conditional_probability.MDhe1 = variant_base.m_val3.ToString();
-          //  textResult.Text += Convert.ToString(conditional_probability.GetProbability(variant_base.m_val1, variant_base.m_val0, variant_base.m_val2, variant_base.m_val3, variant_base.m_val4));
-
         }
         private void ClearToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -58,11 +53,6 @@ namespace IntelligenceSystem
             panelBort_ParmResonanse.Visible = false;
             ClearToolStripMenuItem.Enabled = false;
             butBuild.Enabled = true;
-        }
-
-        private void ControlWindowToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            this.Size = new Size(1323,398);
         }
 
         private void butResult_Click(object sender, EventArgs e)
@@ -76,7 +66,6 @@ namespace IntelligenceSystem
             {
                 MessageBox.Show("Проверте правильность введенных полей!", "Ошибка ввода!");
             }
-           // ShowResonance();
         }
         private void ShowResonance()
         {
@@ -155,7 +144,5 @@ namespace IntelligenceSystem
             textDecision.Text += string.Format("{1}{1}Решение по формуле Байеса {0}", get_bayes_value, Environment.NewLine);
             textDecision.Text += string.Format("{1}{1}Решение по формуле Шортлиффа {0}", get_shortloff_value, Environment.NewLine);
         }
-
-     
     }
 }
